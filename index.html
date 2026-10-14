@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>혜택온 — 가을 학기 구독 할인</title>
+    <style>
+        /* CSS Variables for Color System */
+        :root {
+            --navy: #1a237e;
+            --navy-light: #e8eaf6;
+            --amber: #ffbf00;
+            --amber-dark: #ffa000;
+            --text-dark: #333333;
+            --text-light: #ffffff;
+            --bg-light: #f8f9fa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: var(--navy);
+            color: var(--text-light);
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--amber);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        /* Section Layout */
+        section {
+            padding: 60px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            color: var(--navy);
+        }
+
+        /* Benefit Cards */
+        .card-container {
+            display: flex;
+            gap: 20px;
+            justify-content: space-between;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            flex: 1;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            border-top: 5px solid var(--amber);
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--navy);
+        }
+
+        .card .price {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--amber-dark);
+            margin-bottom: 15px;
+        }
+
+        .card .description {
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .card .evidence {
+            font-size: 0.85rem;
+            color: #666;
+            background: var(--navy-light);
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+
+        /* Steps Section */
+        .steps-container {
+            display: flex;
+            gap: 30px;
+            justify-content: space-between;
+        }
+
+        .step {
+            text-align: center;
+            flex: 1;
+        }
+
+        .step-num {
+            width: 40px;
+            height: 40px;
+            background: var(--navy);
+            color: var(--amber);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* FAQ Section */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        details {
+            background: white;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        summary {
+            padding: 15px 20px;
+            font-weight: bold;
+            cursor: pointer;
+            outline: none;
+            list-style: none;
+            position: relative;
+            color: var(--navy);
+        }
+
+        summary::after {
+            content: '+';
+            position: absolute;
+            right: 20px;
+        }
+
+        details[open] summary::after {
+            content: '-';
+        }
+
+        .faq-content {
+            padding: 0 20px 20px;
+            color: #555;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            text-align: center;
+            padding: 80px 20px;
+            background-color: var(--navy-light);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--amber);
+            color: var(--navy);
+            padding: 20px 40px;
+            font-size: 1.4rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: transform 0.2s, background-color 0.2s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .cta-button:hover {
+            background-color: var(--amber-dark);
+            transform: translateY(-3px);
+        }
+
+        .cta-subtext {
+            display: block;
+            margin-top: 15px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .card-container, .steps-container {
+                flex-direction: column;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <h1>가을 학기, 매일 쓰는 것만 구독하면 됩니다 — 혜택온</h1>
+        <p>가을 시즌 · 신규 첫 달 50% 할인</p>
+    </header>
+
+    <!-- Benefit Section -->
+    <section>
+        <h2 class="section-title">핵심 혜택</h2>
+        <div class="card-container">
+            <div class="card">
+                <h3>커피 구독</h3>
+                <p class="price">월 4,900원 / 월</p>
+                <p class="description">제휴 카페 아메리카노 매일 1잔 30% 할인</p>
+                <p class="evidence">판매 1위 · 매출 비중 45.4%</p>
+            </div>
+            <div class="card">
+                <h3>도시락 구독</h3>
+                <p class="price">월 3,900원 / 월</p>
+                <p class="description">제휴 편의점 도시락 매일 1개 20% 할인</p>
+                <p class="evidence">가장 붐비는 요일은 목요일입니다</p>
+            </div>
+            <div class="card">
+                <h3>올인원</h3>
+                <p class="price">월 7,900원 / 월</p>
+                <p class="description">커피 + 도시락 + 디저트 할인 통합</p>
+                <p class="evidence">캠퍼스 반경 500m, 12개 제휴 매장</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Steps Section -->
+    <section style="background-color: #fff;">
+        <h2 class="section-title">사용 방법</h2>
+        <div class="steps-container">
+            <div class="step">
+                <div class="step-num">1</div>
+                <p><strong>구독 선택</strong><br>앱에서 원하는 구독을 선택합니다</p>
+            </div>
+            <div class="step">
+                <div class="step-num">2</div>
+                <p><strong>QR 제시</strong><br>제휴점에서 QR 코드를 제시합니다</p>
+            </div>
+            <div class="step">
+                <div class="step-num">3</div>
+                <p><strong>할인 적용</strong><br>결제 시 할인이 자동 적용됩니다</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section>
+        <h2 class="section-title">자주 묻는 질문</h2>
+        <div class="faq-container">
+            <details>
+                <summary>해지는 언제든 가능한가요</summary>
+                <div class="faq-content">앱에서 즉시 해지되며, 남은 기간은 일할 계산으로 환불됩니다.</div>
+            </details>
+            <details>
+                <summary>제휴점은 어디인가요</summary>
+                <div class="faq-content">캠퍼스 반경 500m 내 12개 매장이며, 앱 지도에서 확인할 수 있습니다.</div>
+            </details>
+            <details>
+                <summary>할인 횟수에 제한이 있나요</summary>
+                <div class="faq-content">품목당 1일 1회 적용됩니다.</div>
+            </details>
+            <details>
+                <summary>가을 시즌 추가 혜택이 있나요</summary>
+                <div class="faq-content">10~11월 신규 가입 시 첫 달 구독료가 50% 할인됩니다.</div>
+            </details>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <a href="#" class="cta-button">첫 달 50%로 시작하기</a>
+        <span class="cta-subtext">언제든 해지 가능 · 남은 기간 일할 환불</span>
+    </section>
+
+</body>
+</html>
